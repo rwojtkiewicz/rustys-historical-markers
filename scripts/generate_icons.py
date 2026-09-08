@@ -1,0 +1,193 @@
+import os
+import subprocess
+
+SVG_CONTENT = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    
+    <!-- Bronze Outer Plaque Gradient -->
+    <linearGradient id="bronzeBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="30%" stop-color="#d97706"/>
+      <stop offset="70%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+
+    <!-- Bronze Plaque Face Gradient -->
+    <linearGradient id="plaqueFace" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#451a03"/>
+      <stop offset="50%" stop-color="#291102"/>
+      <stop offset="100%" stop-color="#1c0a00"/>
+    </linearGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+    
+    <filter id="innerGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowDiff"/>
+      <feFlood flood-color="#fbbf24" flood-opacity="0.4"/>
+      <feComposite in2="shadowDiff" operator="in"/>
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- App Background Container -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="#334155" stroke-width="3" opacity="0.6"/>
+
+  <!-- Plaque Shadow & Base Group -->
+  <g filter="url(#shadow)">
+    <!-- Main Bronze Historical Marker Shape -->
+    <!-- Curved Header Plaque Arch -->
+    <path d="M 120 110 
+             C 180 60, 332 60, 392 110
+             L 420 160 
+             L 420 380 
+             C 420 395, 405 410, 390 410 
+             L 122 410 
+             C 107 410, 92 395, 92 380 
+             L 92 160 
+             Z" 
+          fill="url(#bronzeBorder)" 
+          stroke="#fbbf24" 
+          stroke-width="6"/>
+
+    <!-- Inner Inscription Plate -->
+    <path d="M 132 124 
+             C 186 82, 326 82, 380 124
+             L 404 168 
+             L 404 370 
+             C 404 380, 394 394, 378 394 
+             L 134 394 
+             C 118 394, 108 380, 108 370 
+             L 108 168 
+             Z" 
+          fill="url(#plaqueFace)" 
+          stroke="#92400e" 
+          stroke-width="3"/>
+
+    <!-- Inner Gold Inset Line -->
+    <path d="M 142 136 
+             C 192 100, 320 100, 370 136
+             L 392 176 
+             L 392 360 
+             C 392 370, 384 382, 370 382 
+             L 142 382 
+             C 128 382, 120 370, 120 360 
+             L 120 176 
+             Z" 
+          fill="none" 
+          stroke="url(#goldAccent)" 
+          stroke-width="2.5" 
+          opacity="0.85"/>
+  </g>
+
+  <!-- Mounting Post Silhouette at bottom -->
+  <rect x="238" y="410" width="36" height="60" rx="4" fill="url(#bronzeBorder)" stroke="#78350f" stroke-width="2"/>
+
+  <!-- Plaque Mounting Screws / Corner Rivets -->
+  <circle cx="120" cy="180" r="5" fill="#fef08a" stroke="#78350f" stroke-width="1.5"/>
+  <circle cx="392" cy="180" r="5" fill="#fef08a" stroke="#78350f" stroke-width="1.5"/>
+  <circle cx="120" cy="382" r="5" fill="#fef08a" stroke="#78350f" stroke-width="1.5"/>
+  <circle cx="392" cy="382" r="5" fill="#fef08a" stroke="#78350f" stroke-width="1.5"/>
+
+  <!-- Top Header Seal / Star Ornament -->
+  <g transform="translate(256, 128)">
+    <circle cx="0" cy="0" r="22" fill="#78350f" stroke="url(#goldAccent)" stroke-width="2.5"/>
+    <polygon points="0,-16 4.5,-5 16,-5 7,3 10.5,14 0,7.5 -10.5,14 -7,3 -16,-5 -4.5,-5" fill="url(#goldAccent)"/>
+  </g>
+
+  <!-- "HISTORICAL MARKER" Header Ribbon Text -->
+  <text x="256" y="174" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="16" 
+        font-weight="900" 
+        letter-spacing="5" 
+        text-anchor="middle" 
+        fill="#fef08a">
+    HISTORICAL MARKER
+  </text>
+
+  <!-- Center Landmark / Monument Icon -->
+  <g transform="translate(256, 260) scale(1.15)">
+    <!-- Monument Pediment & Columns -->
+    <!-- Triangular Roof -->
+    <polygon points="0,-52 -55,-22 55,-22" fill="url(#goldAccent)" stroke="#78350f" stroke-width="1.5"/>
+    <!-- Architrave -->
+    <rect x="-50" y="-22" width="100" height="8" rx="1.5" fill="#fef08a"/>
+    <!-- 4 Classic Columns -->
+    <rect x="-44" y="-12" width="12" height="42" rx="2" fill="url(#goldAccent)"/>
+    <rect x="-18" y="-12" width="12" height="42" rx="2" fill="url(#goldAccent)"/>
+    <rect x="6" y="-12" width="12" height="42" rx="2" fill="url(#goldAccent)"/>
+    <rect x="32" y="-12" width="12" height="42" rx="2" fill="url(#goldAccent)"/>
+    <!-- Base Steps -->
+    <rect x="-56" y="30" width="112" height="9" rx="2" fill="#fef08a"/>
+    <rect x="-64" y="39" width="128" height="10" rx="3" fill="url(#goldAccent)"/>
+  </g>
+
+  <!-- Bottom Plaque Inscription "RUSTY'S MARKERS" -->
+  <rect x="145" y="340" width="222" height="28" rx="6" fill="#1e1005" stroke="url(#goldAccent)" stroke-width="1.5"/>
+  <text x="256" y="359" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="13" 
+        font-weight="800" 
+        letter-spacing="2.5" 
+        text-anchor="middle" 
+        fill="#fde047">
+    RUSTY'S MARKERS
+  </text>
+</svg>
+"""
+
+def generate_icons():
+    os.makedirs("public", exist_ok=True)
+    
+    # 1. Save SVG icon
+    svg_path = "public/icon.svg"
+    with open(svg_path, "w", encoding="utf-8") as f:
+        f.write(SVG_CONTENT)
+    print(f"Saved {svg_path}")
+
+    # Copy to favicon.svg
+    favicon_path = "public/favicon.svg"
+    with open(favicon_path, "w", encoding="utf-8") as f:
+        f.write(SVG_CONTENT)
+    print(f"Saved {favicon_path}")
+
+    # 2. Render PNG icons using qlmanage / sips
+    try:
+        # qlmanage renders SVG thumbnail to PNG
+        subprocess.run(["qlmanage", "-t", "-s", "512", "-o", "public", svg_path], check=True, capture_output=True)
+        # qlmanage creates icon.svg.png
+        generated_png = "public/icon.svg.png"
+        if os.path.exists(generated_png):
+            # Create 512x512 icon
+            subprocess.run(["sips", "-s", "format", "png", "--resampleHeightWidth", "512", "512", generated_png, "--out", "public/icon-512.png"], check=True)
+            # Create 192x192 icon
+            subprocess.run(["sips", "-s", "format", "png", "--resampleHeightWidth", "192", "192", generated_png, "--out", "public/icon-192.png"], check=True)
+            # Create Apple Touch Icon (180x180)
+            subprocess.run(["sips", "-s", "format", "png", "--resampleHeightWidth", "180", "180", generated_png, "--out", "public/apple-touch-icon.png"], check=True)
+            # Remove intermediate file
+            os.remove(generated_png)
+            print("Successfully generated icon-512.png, icon-192.png, and apple-touch-icon.png!")
+        else:
+            print("qlmanage did not produce expected file, using SVG directly.")
+    except Exception as e:
+        print(f"PNG generation fallback: {e}")
+
+if __name__ == "__main__":
+    generate_icons()

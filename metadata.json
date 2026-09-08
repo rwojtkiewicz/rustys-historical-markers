@@ -1,0 +1,1 @@
+{"name":"HistoriDrive - GPS Historical Marker Alert","description":"Mobile GPS alert \u0026 route planner that automatically announces historical markers, reads plaque text via text-to-speech, and displays site photos while driving.","requestFramePermissions":["geolocation"],"majorCapabilities":["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]}
