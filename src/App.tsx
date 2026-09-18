@@ -30,7 +30,7 @@ const DEFAULT_SETTINGS: UserSettings = {
   speechPitch: 1.0,
   alertRadiusMeters: 500, // 500 meters (~0.3 miles)
   selectedVoiceName: null,
-  selectedRouteId: 'route-66-missouri',
+  selectedRouteId: 'route-platte-all-county',
   simulationSpeedMph: 45,
   phoneFrame: 'iphone',
   activeTab: 'drive',
@@ -71,6 +71,7 @@ export default function App() {
   const [isDriving, setIsDriving] = useState(false);
   const [isSimulating, setIsSimulating] = useState(false);
   const [simulatedProgressPct, setSimulatedProgressPct] = useState(0);
+  const [gpsAccuracyMeters, setGpsAccuracyMeters] = useState<number | null>(null);
   const [currentLocation, setCurrentLocation] = useState<{
     lat: number;
     lng: number;
@@ -79,6 +80,7 @@ export default function App() {
   } | null>(null);
 
   const [approachingMarker, setApproachingMarker] = useState<HistoricalMarker | null>(null);
+  const [nearestMarker, setNearestMarker] = useState<HistoricalMarker | null>(null);
   const [distanceToNextMarkerMeters, setDistanceToNextMarkerMeters] = useState<number | null>(null);
 
   const [triggeredMarkerIds, setTriggeredMarkerIds] = useState<Set<string>>(new Set());
@@ -89,7 +91,7 @@ export default function App() {
     } catch (e) {
       console.error('Failed to load saved markers:', e);
     }
-    return new Set(['hmdb-44509']);
+    return new Set(['marker-platte-64391', 'marker-platte-44509']);
   });
 
   const [activeMarkerForModal, setActiveMarkerForModal] = useState<HistoricalMarker | null>(null);
@@ -176,12 +178,18 @@ export default function App() {
   // Proximity & Arrival Detection Logic
   const checkProximityToMarkers = useCallback(
     (lat: number, lng: number) => {
-      if (!corridorMarkers || corridorMarkers.length === 0) return;
+      // In real-world driving mode or all-county tour, check against ALL Platte County markers
+      const targetMarkers =
+        isDriving || !corridorMarkers || corridorMarkers.length === 0 || activeRoute?.id === 'route-platte-all-county'
+          ? markers
+          : corridorMarkers;
+
+      if (!targetMarkers || targetMarkers.length === 0) return;
 
       let closestMarker: HistoricalMarker | null = null;
       let minDistance = Infinity;
 
-      for (const m of corridorMarkers) {
+      for (const m of targetMarkers) {
         const d = calculateDistanceMeters(lat, lng, m.lat, m.lng);
         if (d < minDistance) {
           minDistance = d;
@@ -196,9 +204,9 @@ export default function App() {
             setApproachingMarker(m);
 
             // Subtle device vibration trigger for real-world GPS driving mode
-            if (isDriving && typeof navigator !== 'undefined' && 'vibrate' in navigator) {
+            if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
               try {
-                navigator.vibrate([100, 50, 100]);
+                navigator.vibrate([150, 80, 150]);
               } catch (e) {
                 console.debug('Vibration API not available or permitted:', e);
               }
@@ -218,15 +226,20 @@ export default function App() {
       }
 
       setDistanceToNextMarkerMeters(minDistance !== Infinity ? minDistance : null);
-      if (minDistance <= settings.alertRadiusMeters * 1.5 && closestMarker) {
-        setApproachingMarker(closestMarker);
-      } else if (minDistance > settings.alertRadiusMeters * 2) {
-        setApproachingMarker(null);
+      if (closestMarker) {
+        setNearestMarker(closestMarker);
+        if (minDistance <= settings.alertRadiusMeters * 1.5) {
+          setApproachingMarker(closestMarker);
+        } else if (minDistance > settings.alertRadiusMeters * 2.5) {
+          setApproachingMarker(null);
+        }
       }
     },
     [
+      markers,
       corridorMarkers,
       isDriving,
+      activeRoute,
       settings.alertRadiusMeters,
       settings.autoAnnounceTTS,
       settings.autoShowModal,
@@ -276,8 +289,44 @@ export default function App() {
     };
   }, [isSimulating, activeRoute, settings.simulationSpeedMph, checkProximityToMarkers]);
 
-  // REAL GEOLOCATION WATCHER
+  // SCREEN WAKE LOCK & REAL GEOLOCATION WATCHER
   const geoWatchRef = useRef<number | null>(null);
+  const wakeLockRef = useRef<any>(null);
+
+  const requestWakeLock = useCallback(async () => {
+    if (typeof navigator !== 'undefined' && 'wakeLock' in navigator) {
+      try {
+        wakeLockRef.current = await (navigator as any).wakeLock.request('screen');
+        wakeLockRef.current.addEventListener('release', () => {
+          console.debug('Wake lock released');
+        });
+      } catch (err) {
+        console.debug('Wake lock request notice:', err);
+      }
+    }
+  }, []);
+
+  const releaseWakeLock = useCallback(() => {
+    if (wakeLockRef.current) {
+      try {
+        wakeLockRef.current.release();
+      } catch (e) {}
+      wakeLockRef.current = null;
+    }
+  }, []);
+
+  // Re-acquire wake lock if user switches back to app or screen wakes
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible' && isDriving) {
+        requestWakeLock();
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [isDriving, requestWakeLock]);
 
   const toggleRealGPS = useCallback(() => {
     if (isDriving) {
@@ -285,7 +334,9 @@ export default function App() {
         navigator.geolocation.clearWatch(geoWatchRef.current);
         geoWatchRef.current = null;
       }
+      releaseWakeLock();
       setIsDriving(false);
+      setGpsAccuracyMeters(null);
       return;
     }
 
@@ -296,11 +347,23 @@ export default function App() {
 
     setIsDriving(true);
     setIsSimulating(false);
+    requestWakeLock();
+
+    // Initial audio test / unlock announcement so speech isn't blocked by mobile browser
+    if (settings.autoAnnounceTTS) {
+      speak('GPS mode active. Scanning Platte County historical markers.', {
+        rate: settings.speechRate,
+        pitch: settings.speechPitch,
+        voiceName: settings.selectedVoiceName,
+      });
+    }
 
     geoWatchRef.current = navigator.geolocation.watchPosition(
       (pos) => {
-        const { latitude, longitude, heading, speed } = pos.coords;
-        const speedMph = speed ? speed * 2.23694 : 35; // m/s to mph
+        const { latitude, longitude, heading, speed, accuracy } = pos.coords;
+        const speedMph = speed ? speed * 2.23694 : 0; // m/s to mph
+
+        setGpsAccuracyMeters(accuracy || null);
 
         setCurrentLocation({
           lat: latitude,
@@ -313,15 +376,18 @@ export default function App() {
       },
       (err) => {
         console.error('GPS Watch error:', err);
+        alert('GPS Notice: ' + err.message + '. Please ensure Location is allowed in Chrome settings.');
         setIsDriving(false);
+        releaseWakeLock();
+        setGpsAccuracyMeters(null);
       },
       {
         enableHighAccuracy: true,
-        maximumAge: 1000,
-        timeout: 10000,
+        maximumAge: 0,
+        timeout: 15000,
       }
     );
-  }, [isDriving, checkProximityToMarkers]);
+  }, [isDriving, settings, checkProximityToMarkers, speak, requestWakeLock, releaseWakeLock]);
 
   // Simulation controls
   const handleStartSimulation = () => {
@@ -385,8 +451,12 @@ export default function App() {
             onToggleRealGPS={toggleRealGPS}
             activeRoute={activeRoute}
             approachingMarker={approachingMarker}
+            nearestMarker={nearestMarker}
             distanceToNextMarkerMeters={distanceToNextMarkerMeters}
             currentSpeedMph={currentLocation?.speedMph || 0}
+            gpsAccuracyMeters={gpsAccuracyMeters}
+            currentLocation={currentLocation}
+            totalMarkersCount={markers.length}
             settings={settings}
             onUpdateSettings={updateSettings}
             onOpenMarkerModal={(marker) => setActiveMarkerForModal(marker)}

@@ -15,6 +15,8 @@ import {
   Landmark,
   Sparkles,
   MapPin,
+  ShieldCheck,
+  Zap,
 } from 'lucide-react';
 import { HistoricalMarker, DrivingRoute, UserSettings } from '../types';
 import { formatDistance } from '../utils/geoUtils';
@@ -29,8 +31,12 @@ interface DriveViewProps {
   onToggleRealGPS: () => void;
   activeRoute: DrivingRoute | null;
   approachingMarker: HistoricalMarker | null;
+  nearestMarker?: HistoricalMarker | null;
   distanceToNextMarkerMeters: number | null;
   currentSpeedMph: number;
+  gpsAccuracyMeters?: number | null;
+  currentLocation?: { lat: number; lng: number; heading: number; speedMph: number } | null;
+  totalMarkersCount?: number;
   settings: UserSettings;
   onUpdateSettings: (newSettings: Partial<UserSettings>) => void;
   onOpenMarkerModal: (marker: HistoricalMarker) => void;
@@ -49,8 +55,12 @@ export const DriveView: React.FC<DriveViewProps> = ({
   onToggleRealGPS,
   activeRoute,
   approachingMarker,
+  nearestMarker,
   distanceToNextMarkerMeters,
   currentSpeedMph,
+  gpsAccuracyMeters,
+  currentLocation,
+  totalMarkersCount = 77,
   settings,
   onUpdateSettings,
   onOpenMarkerModal,
@@ -76,7 +86,7 @@ export const DriveView: React.FC<DriveViewProps> = ({
               <span>{isSimulating ? 'SIMULATED DRIVE' : isDriving ? 'GPS LIVE' : 'STOPPED'}</span>
             </div>
             <p className="text-[11px] text-slate-400 truncate max-w-[140px] mt-0.5">
-              {activeRoute ? activeRoute.name : 'Select a Route'}
+              {activeRoute ? activeRoute.name : 'Platte County Markers'}
             </p>
           </div>
         </div>
@@ -90,10 +100,27 @@ export const DriveView: React.FC<DriveViewProps> = ({
             </span>
           </div>
           <span className="text-[9px] text-slate-400 mt-1">
-            {triggeredMarkerIds.size} Markers Announced
+            {triggeredMarkerIds.size} / {totalMarkersCount} Discovered
           </span>
         </div>
       </div>
+
+      {/* GPS Telemetry Banner (Coordinates & Accuracy) */}
+      {isDriving && currentLocation && (
+        <div className="mt-2 px-3 py-1.5 bg-emerald-950/40 border border-emerald-500/30 rounded-xl flex items-center justify-between text-[11px] text-emerald-300">
+          <div className="flex items-center gap-1.5 font-mono">
+            <Navigation className="w-3 h-3 text-emerald-400" />
+            <span>
+              {currentLocation.lat.toFixed(4)}° N, {Math.abs(currentLocation.lng).toFixed(4)}° W
+            </span>
+          </div>
+          <div className="flex items-center gap-1 text-[10px] font-semibold">
+            <ShieldCheck className="w-3 h-3 text-emerald-400" />
+            <span>{gpsAccuracyMeters ? `±${Math.round(gpsAccuracyMeters)}m lock` : 'GPS active'}</span>
+            <span className="text-emerald-500">• Screen Awake</span>
+          </div>
+        </div>
+      )}
 
       {/* Main Upcoming Marker Alert Card or Radar Pulse */}
       {approachingMarker ? (
@@ -110,7 +137,7 @@ export const DriveView: React.FC<DriveViewProps> = ({
 
             <div className="flex-1 min-w-0">
               <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider">
-                {approachingMarker.category} • {approachingMarker.era}
+                {approachingMarker.category} • {approachingMarker.city}, MO
               </span>
               <h2 className="text-base font-extrabold text-white truncate leading-tight mt-0.5">
                 {approachingMarker.title}
@@ -144,42 +171,78 @@ export const DriveView: React.FC<DriveViewProps> = ({
                 onClick={() => onOpenMarkerModal(approachingMarker)}
                 className="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 transition"
               >
-                <span>View Site</span>
+                <span>View Details</span>
               </button>
             </div>
           </div>
         </div>
       ) : (
-        /* Scanning Radar Idle State */
-        <div className="my-3 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4 text-center flex flex-col items-center justify-center relative overflow-hidden">
-          <div className="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2 relative">
-            <Radio className="w-8 h-8 text-amber-400 animate-pulse" />
+        /* Scanning Radar Idle State with Live Closest Marker Countdown */
+        <div className="my-3 bg-slate-900/70 border border-slate-800/80 rounded-2xl p-4 text-center flex flex-col items-center justify-center relative overflow-hidden">
+          <div className="w-14 h-14 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2 relative">
+            <Radio className="w-7 h-7 text-amber-400 animate-pulse" />
             <div className="absolute inset-0 rounded-full border border-amber-500/20 animate-ping"></div>
           </div>
 
-          <h3 className="text-sm font-bold text-amber-100">Scanning for Historical Markers</h3>
-          <p className="text-xs text-slate-400 max-w-xs mt-1">
-            {isSimulating || isDriving
-              ? 'Driving along route... You will be alerted automatically when approaching a historical plaque.'
-              : 'Press "Start Driving Simulation" below to preview GPS alerts along the highway route.'}
+          <h3 className="text-sm font-bold text-amber-100">Scanning Platte County Historical Markers</h3>
+          <p className="text-[11px] text-slate-400 max-w-xs mt-0.5">
+            {isDriving
+              ? 'GPS Active. Keep driving—audio narration will automatically trigger when approaching a marker plaque.'
+              : isSimulating
+              ? 'Simulated driving along selected corridor route.'
+              : 'Tap "Real GPS" below when in your vehicle to start automated roadside announcements.'}
           </p>
 
-          {distanceToNextMarkerMeters !== null && (
-            <div className="mt-2 text-xs text-amber-300 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 font-medium">
-              Next Marker in {formatDistance(distanceToNextMarkerMeters)}
+          {/* Live Closest Marker Telemetry */}
+          {nearestMarker && (
+            <div
+              onClick={() => onOpenMarkerModal(nearestMarker)}
+              className="mt-3 w-full bg-slate-950/80 hover:bg-slate-950 border border-amber-500/30 rounded-xl p-2.5 flex items-center justify-between text-left cursor-pointer transition shadow"
+            >
+              <div className="flex items-center gap-2 min-w-0">
+                <div className="w-7 h-7 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-[9px] font-bold text-amber-400 uppercase tracking-wider">
+                    Nearest Marker • {nearestMarker.city}
+                  </div>
+                  <div className="text-xs font-bold text-slate-200 truncate">
+                    {nearestMarker.title}
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-right shrink-0 ml-2">
+                <div className="text-xs font-extrabold text-amber-300">
+                  {distanceToNextMarkerMeters !== null
+                    ? formatDistance(distanceToNextMarkerMeters)
+                    : '--'}
+                </div>
+                <div className="text-[9px] text-slate-400">away</div>
+              </div>
             </div>
           )}
         </div>
       )}
 
-      {/* USER TOGGLES (Explicitly Requested!) */}
+      {/* USER TOGGLES */}
       <div className="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-lg">
         <div className="flex items-center justify-between mb-2 pb-2 border-b border-slate-800">
           <div className="flex items-center gap-1.5 text-xs font-bold text-amber-400 uppercase tracking-wider">
             <Sliders className="w-3.5 h-3.5" />
             <span>Driver Alert Toggles</span>
           </div>
-          <span className="text-[10px] text-slate-400">User Preferences</span>
+          {/* Test Audio Button */}
+          {nearestMarker && (
+            <button
+              onClick={() => onSpeakMarker(nearestMarker)}
+              className="flex items-center gap-1 text-[10px] text-amber-300 hover:text-amber-200 bg-amber-500/10 hover:bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30 transition font-semibold"
+            >
+              <Zap className="w-3 h-3 text-amber-400" />
+              <span>Test Audio</span>
+            </button>
+          )}
         </div>
 
         <div className="grid grid-cols-2 gap-2 text-xs">
@@ -246,16 +309,16 @@ export const DriveView: React.FC<DriveViewProps> = ({
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
-                {dist >= 1000 ? '1 km' : `${dist}m`}
+                {dist >= 1000 ? '1 km (~0.6 mi)' : `${dist}m`}
               </button>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Simulation Drive Controls */}
+      {/* Primary Driving Action Controls */}
       <div className="mt-3 bg-slate-900 border border-slate-800 rounded-2xl p-3">
-        {/* Progress Bar */}
+        {/* Simulation Progress Bar */}
         {isSimulating && (
           <div className="mb-2.5">
             <div className="flex justify-between text-[10px] text-slate-400 font-mono mb-1">
@@ -272,42 +335,44 @@ export const DriveView: React.FC<DriveViewProps> = ({
         )}
 
         <div className="flex items-center justify-between gap-2">
+          {/* Real GPS Toggle Button (High Visibility) */}
+          <button
+            onClick={onToggleRealGPS}
+            className={`flex-1 py-3 px-3 rounded-xl text-xs font-black border transition flex items-center justify-center gap-2 shadow-lg ${
+              isDriving
+                ? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 border-emerald-400 shadow-emerald-950/50 animate-pulse'
+                : 'bg-emerald-600 hover:bg-emerald-500 text-white border-emerald-500/50'
+            }`}
+          >
+            <Navigation className="w-4 h-4 fill-current" />
+            <span>{isDriving ? 'STOP GPS TRACKING' : 'START REAL GPS'}</span>
+          </button>
+
           {!isSimulating ? (
             <button
               onClick={onStartSimulation}
-              className="flex-1 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-extrabold text-xs py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-amber-950/40 transition"
+              className="bg-slate-800 hover:bg-slate-700 text-amber-400 text-xs font-bold py-3 px-3 rounded-xl border border-slate-700 flex items-center gap-1.5 transition"
+              title="Simulate Route Drive"
             >
-              <Play className="w-4 h-4 fill-slate-950" />
-              <span>Simulate Driving</span>
+              <Play className="w-3.5 h-3.5 fill-amber-400" />
+              <span>Simulate</span>
             </button>
           ) : (
             <button
               onClick={onPauseSimulation}
-              className="flex-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold text-xs py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition"
+              className="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-bold py-3 px-3 rounded-xl flex items-center gap-1.5 transition"
             >
-              <Pause className="w-4 h-4 fill-amber-300" />
-              <span>Pause Drive</span>
+              <Pause className="w-3.5 h-3.5 fill-amber-300" />
+              <span>Pause</span>
             </button>
           )}
 
           <button
             onClick={onResetSimulation}
-            className="bg-slate-800 hover:bg-slate-700 text-slate-300 p-2.5 rounded-xl border border-slate-700 transition"
-            title="Reset Drive Progress"
+            className="bg-slate-800 hover:bg-slate-700 text-slate-300 p-3 rounded-xl border border-slate-700 transition"
+            title="Reset Simulation Progress"
           >
             <RotateCcw className="w-4 h-4" />
-          </button>
-
-          <button
-            onClick={onToggleRealGPS}
-            className={`px-3 py-2.5 rounded-xl text-xs font-bold border transition flex items-center gap-1 ${
-              isDriving
-                ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
-                : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'
-            }`}
-          >
-            <Navigation className="w-3.5 h-3.5" />
-            <span>Real GPS</span>
           </button>
         </div>
       </div>
@@ -316,9 +381,9 @@ export const DriveView: React.FC<DriveViewProps> = ({
       <div className="mt-3">
         <div className="flex items-center justify-between text-xs mb-1.5 px-1">
           <span className="font-bold text-slate-300 uppercase text-[10px] tracking-wider">
-            Markers Along This Route ({corridorMarkers.length})
+            {activeRoute ? activeRoute.name : 'Platte County Markers'} ({corridorMarkers.length})
           </span>
-          <span className="text-[10px] text-amber-400">Sequential Audio Tour</span>
+          <span className="text-[10px] text-amber-400">Platte County, MO</span>
         </div>
 
         <div className="space-y-1.5 max-h-36 overflow-y-auto pr-1">
