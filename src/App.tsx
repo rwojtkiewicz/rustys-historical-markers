@@ -96,6 +96,11 @@ export default function App() {
 
   const [activeMarkerForModal, setActiveMarkerForModal] = useState<HistoricalMarker | null>(null);
 
+  // Synchronous ref locks for GPS and Audio to eliminate race conditions and restarts
+  const triggeredMarkerIdsRef = useRef<Set<string>>(new Set());
+  const inProgressAudioMarkerIdRef = useRef<string | null>(null);
+  const checkProximityRef = useRef<(lat: number, lng: number) => void>(() => {});
+
   // Text To Speech Hook
   const {
     voices,
@@ -162,17 +167,28 @@ export default function App() {
     });
   }, []);
 
-  // Speak plaque text using configured voice options
+  // Speak plaque text using configured voice options with IN-PROGRESS protection
   const handleSpeakMarkerPlaque = useCallback(
     (marker: HistoricalMarker) => {
+      // If audio is already in progress for this marker, ignore extra GPS pings!
+      if (inProgressAudioMarkerIdRef.current === marker.id && isSpeaking) {
+        console.debug('Audio already in progress for marker:', marker.id);
+        return;
+      }
+
+      inProgressAudioMarkerIdRef.current = marker.id;
       const textToAnnounce = `Approaching ${marker.title}. ${marker.plaqueText}`;
+
       speak(textToAnnounce, {
         rate: settings.speechRate,
         pitch: settings.speechPitch,
         voiceName: settings.selectedVoiceName,
+        onEnd: () => {
+          inProgressAudioMarkerIdRef.current = null;
+        },
       });
     },
-    [speak, settings]
+    [speak, settings, isSpeaking]
   );
 
   // Proximity & Arrival Detection Logic
@@ -198,9 +214,10 @@ export default function App() {
 
         // Trigger condition
         if (d <= settings.alertRadiusMeters) {
-          if (!triggeredMarkerIds.has(m.id)) {
-            // New discovery!
-            setTriggeredMarkerIds((prev) => new Set(prev).add(m.id));
+          // Synchronously check the Ref to prevent race conditions from rapid GPS stream pings
+          if (!triggeredMarkerIdsRef.current.has(m.id)) {
+            triggeredMarkerIdsRef.current.add(m.id);
+            setTriggeredMarkerIds(new Set(triggeredMarkerIdsRef.current));
             setApproachingMarker(m);
 
             // Subtle device vibration trigger for real-world GPS driving mode
@@ -243,10 +260,14 @@ export default function App() {
       settings.alertRadiusMeters,
       settings.autoAnnounceTTS,
       settings.autoShowModal,
-      triggeredMarkerIds,
       handleSpeakMarkerPlaque,
     ]
   );
+
+  // Keep latest checkProximityRef in sync
+  useEffect(() => {
+    checkProximityRef.current = checkProximityToMarkers;
+  }, [checkProximityToMarkers]);
 
   // SIMULATION ROUTE DRIVE LOOP
   const simIntervalRef = useRef<number | null>(null);
@@ -278,7 +299,7 @@ export default function App() {
           speedMph: settings.simulationSpeedMph,
         });
 
-        checkProximityToMarkers(pos.lat, pos.lng);
+        checkProximityRef.current(pos.lat, pos.lng);
 
         return nextPct;
       });
@@ -287,7 +308,7 @@ export default function App() {
     return () => {
       if (simIntervalRef.current) clearInterval(simIntervalRef.current);
     };
-  }, [isSimulating, activeRoute, settings.simulationSpeedMph, checkProximityToMarkers]);
+  }, [isSimulating, activeRoute, settings.simulationSpeedMph]);
 
   // SCREEN WAKE LOCK & REAL GEOLOCATION WATCHER
   const geoWatchRef = useRef<number | null>(null);
@@ -372,7 +393,7 @@ export default function App() {
           speedMph: speedMph,
         });
 
-        checkProximityToMarkers(latitude, longitude);
+        checkProximityRef.current(latitude, longitude);
       },
       (err) => {
         console.error('GPS Watch error:', err);
@@ -387,7 +408,7 @@ export default function App() {
         timeout: 15000,
       }
     );
-  }, [isDriving, settings, checkProximityToMarkers, speak, requestWakeLock, releaseWakeLock]);
+  }, [isDriving, settings, speak, requestWakeLock, releaseWakeLock]);
 
   // Simulation controls
   const handleStartSimulation = () => {

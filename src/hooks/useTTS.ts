@@ -50,10 +50,16 @@ export function useTTS() {
         return;
       }
 
+      if (!text || text.trim().length === 0) return;
+
+      // Prevent redundant speech restart if already speaking the exact same text
+      if (isSpeaking && currentText === text) {
+        console.debug('Speech already in progress for this text');
+        return;
+      }
+
       // Cancel any ongoing speech
       stop();
-
-      if (!text || text.trim().length === 0) return;
 
       const utterance = new SpeechSynthesisUtterance(text);
       utteranceRef.current = utterance;
@@ -120,7 +126,7 @@ export function useTTS() {
         setIsPaused(false);
       }
     },
-    [voices, stop]
+    [voices, stop, isSpeaking, currentText]
   );
 
   const pause = useCallback(() => {
