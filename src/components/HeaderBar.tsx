@@ -7,6 +7,7 @@ interface HeaderBarProps {
   isDriving: boolean;
   isSimulating: boolean;
   isTTSActive: boolean;
+  speechQueueLength?: number;
   onStopTTS?: () => void;
 }
 
@@ -15,6 +16,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
   isDriving,
   isSimulating,
   isTTSActive,
+  speechQueueLength = 0,
   onStopTTS,
 }) => {
   return (
@@ -48,7 +50,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
         </div>
       </div>
 
-      {/* Speech / Sound Active Pill */}
+      {/* Speech / Sound Active Pill with Queue Counter */}
       {isTTSActive && (
         <button
           onClick={onStopTTS}
@@ -56,7 +58,9 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
           title="Click to Mute Speech"
         >
           <Volume2 className="w-3.5 h-3.5 text-amber-400" />
-          <span>Speaking...</span>
+          <span>
+            Speaking...{speechQueueLength > 0 ? ` (+${speechQueueLength} queued)` : ''}
+          </span>
         </button>
       )}
     </div>

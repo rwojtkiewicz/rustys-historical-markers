@@ -101,16 +101,18 @@ export default function App() {
   const inProgressAudioMarkerIdRef = useRef<string | null>(null);
   const checkProximityRef = useRef<(lat: number, lng: number) => void>(() => {});
 
-  // Text To Speech Hook
+  // Text To Speech Hook with Sequential Queue Support
   const {
     voices,
     isSpeaking,
     isPaused,
     currentCharIndex,
+    queueLength,
     speak,
     pause,
     resume,
     stop,
+    clearPlayedHistory,
   } = useTTS();
 
   // Load initial markers from API if available
@@ -167,28 +169,19 @@ export default function App() {
     });
   }, []);
 
-  // Speak plaque text using configured voice options with IN-PROGRESS protection
+  // Speak plaque text using Sequential Speech Queue with duplicate protection
   const handleSpeakMarkerPlaque = useCallback(
     (marker: HistoricalMarker) => {
-      // If audio is already in progress for this marker, ignore extra GPS pings!
-      if (inProgressAudioMarkerIdRef.current === marker.id && isSpeaking) {
-        console.debug('Audio already in progress for marker:', marker.id);
-        return;
-      }
-
-      inProgressAudioMarkerIdRef.current = marker.id;
       const textToAnnounce = `Approaching ${marker.title}. ${marker.plaqueText}`;
 
       speak(textToAnnounce, {
+        id: marker.id,
         rate: settings.speechRate,
         pitch: settings.speechPitch,
         voiceName: settings.selectedVoiceName,
-        onEnd: () => {
-          inProgressAudioMarkerIdRef.current = null;
-        },
       });
     },
-    [speak, settings, isSpeaking]
+    [speak, settings]
   );
 
   // Proximity & Arrival Detection Logic
@@ -426,8 +419,11 @@ export default function App() {
   const handleResetSimulation = () => {
     setIsSimulating(false);
     setSimulatedProgressPct(0);
+    triggeredMarkerIdsRef.current = new Set();
     setTriggeredMarkerIds(new Set());
     setApproachingMarker(null);
+    clearPlayedHistory();
+    stop();
     if (activeRoute && activeRoute.waypoints.length > 0) {
       const startWp = activeRoute.waypoints[0];
       setCurrentLocation({
@@ -456,6 +452,7 @@ export default function App() {
         isDriving={isDriving}
         isSimulating={isSimulating}
         isTTSActive={isSpeaking}
+        speechQueueLength={queueLength}
         onStopTTS={stop}
       />
 
