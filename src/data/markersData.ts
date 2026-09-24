@@ -15,7 +15,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2009,
+    "erectedBy": "Citizens of Camden Point and surrounding areas",
     "markerNumber": "HMdb-22004",
+    "missing": false,
+    "hmdbId": 22004,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=22004",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-city-kci"
@@ -24,6 +29,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Camden Point Veterans' Marker",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -43,7 +49,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Platte County Historical Society",
     "markerNumber": "HMdb-40986",
+    "missing": false,
+    "hmdbId": 40986,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=40986",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-south-parkville"
@@ -52,6 +63,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: John H. Dillingham",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -71,7 +83,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "T2 [32]",
+    "missing": false,
+    "hmdbId": 43178,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43178",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-city-kci"
@@ -80,6 +97,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Airport History",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -99,7 +117,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "A1",
+    "missing": false,
+    "hmdbId": 43179,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43179",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -107,6 +130,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: The Pony Express",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -126,7 +150,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "A2",
+    "missing": false,
+    "hmdbId": 43181,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43181",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -134,6 +163,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Aromatherapy",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -153,7 +183,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "A3",
+    "missing": false,
+    "hmdbId": 43182,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43182",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -161,6 +196,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: KC Art Deco",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -180,7 +216,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "A4",
+    "missing": false,
+    "hmdbId": 43183,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43183",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -188,6 +229,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Satchel Paige",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -207,7 +249,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "A5",
+    "missing": false,
+    "hmdbId": 43184,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43184",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -215,6 +262,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: The Stockyards",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -234,7 +282,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "A6",
+    "missing": false,
+    "hmdbId": 43186,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43186",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -242,6 +295,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Shoe Parties",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -261,7 +315,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B2",
+    "missing": false,
+    "hmdbId": 43188,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43188",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -269,6 +328,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: The Liberty Memorial",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -288,7 +348,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B3",
+    "missing": false,
+    "hmdbId": 43189,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43189",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -296,6 +361,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Happy Trails",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -315,7 +381,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B4",
+    "missing": false,
+    "hmdbId": 43190,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43190",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -323,6 +394,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: The Country Club Plaza",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -342,7 +414,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B5",
+    "missing": false,
+    "hmdbId": 43193,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43193",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -350,6 +427,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Hale: The Firepole",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -369,7 +447,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B6",
+    "missing": false,
+    "hmdbId": 43194,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43194",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -377,6 +460,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Home of BBQ",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -396,7 +480,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B7",
+    "missing": false,
+    "hmdbId": 43195,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43195",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -404,6 +493,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Mouse Tale",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -423,7 +513,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B8",
+    "missing": false,
+    "hmdbId": 43196,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43196",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -431,6 +526,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: The American Royal",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -450,7 +546,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B9",
+    "missing": false,
+    "hmdbId": 43197,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43197",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -458,6 +559,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Football Fever",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -477,7 +579,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B10",
+    "missing": false,
+    "hmdbId": 43199,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43199",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -485,6 +592,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Rail Center",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -504,7 +612,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B11",
+    "missing": false,
+    "hmdbId": 43200,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43200",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -512,6 +625,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Art and Soul",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -531,7 +645,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B13",
+    "missing": false,
+    "hmdbId": 43203,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43203",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -539,6 +658,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Atkins Gift",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -558,7 +678,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "C2",
+    "missing": false,
+    "hmdbId": 43224,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43224",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -566,6 +691,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: All That Jazz",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -585,7 +711,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "C3",
+    "missing": false,
+    "hmdbId": 43227,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43227",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -593,6 +724,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Swope Park",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -612,7 +744,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "C4",
+    "missing": false,
+    "hmdbId": 43230,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43230",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -620,6 +757,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Thomas Hart Benton",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -639,7 +777,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "C5",
+    "missing": false,
+    "hmdbId": 43231,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43231",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -647,6 +790,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: The Garment District",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -666,7 +810,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "C6",
+    "missing": false,
+    "hmdbId": 43232,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43232",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -674,6 +823,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: On The River",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -693,7 +843,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "C7",
+    "missing": false,
+    "hmdbId": 43233,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43233",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -702,6 +857,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Lewis and Clark",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -721,7 +877,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "C8",
+    "missing": false,
+    "hmdbId": 43234,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43234",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -729,6 +890,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Sweet Tooth",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -748,7 +910,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "C9",
+    "missing": false,
+    "hmdbId": 43235,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43235",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -756,6 +923,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: One of KC's Oldest",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -775,7 +943,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "C10",
+    "missing": false,
+    "hmdbId": 43236,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43236",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -783,6 +956,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: City of Fountains",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -802,7 +976,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "C11",
+    "missing": false,
+    "hmdbId": 43253,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=43253",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -810,6 +989,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Heart of the Nation",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -829,7 +1009,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 1998,
+    "erectedBy": "American Legion Post 501",
     "markerNumber": "HMdb-44501",
+    "missing": false,
+    "hmdbId": 44501,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44501",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -838,6 +1023,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Weston Veterans Memorial",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -857,7 +1043,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Platte County Historical Society",
     "markerNumber": "HMdb-44503",
+    "missing": false,
+    "hmdbId": 44503,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44503",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -866,6 +1057,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Weston",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -885,7 +1077,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44506",
+    "missing": false,
+    "hmdbId": 44506,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44506",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -894,6 +1091,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Weston, Missouri, Jail",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -913,7 +1111,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "City of Weston",
     "markerNumber": "HMdb-44509",
+    "missing": false,
+    "hmdbId": 44509,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44509",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -922,6 +1125,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Weston, Missouri",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -941,7 +1145,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "National Park Service, U.S. Department of the Interior",
     "markerNumber": "HMdb-44517",
+    "missing": false,
+    "hmdbId": 44517,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44517",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -950,6 +1159,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: The Lewis and Clark Expedition",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -969,7 +1179,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44520",
+    "missing": false,
+    "hmdbId": 44520,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44520",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -978,6 +1193,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Lewis & Clark Campsite",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -997,7 +1213,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "St. Joseph Museum, Platte County Visitors Bureau, and The Native Sons of Greater Kansas City.",
     "markerNumber": "HMdb-44521",
+    "missing": false,
+    "hmdbId": 44521,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44521",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1006,6 +1227,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: \"Bear Medison Island\"",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1025,7 +1247,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "The Historic Weston Experience - Preserve America",
     "markerNumber": "8",
+    "missing": false,
+    "hmdbId": 44522,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44522",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1034,6 +1261,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: \"Hell's Half Acre\"",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1053,7 +1281,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44528",
+    "missing": false,
+    "hmdbId": 44528,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44528",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1062,6 +1295,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Yocum-Benner Buildings",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1081,7 +1315,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44529",
+    "missing": false,
+    "hmdbId": 44529,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44529",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1090,6 +1329,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Doppler Building",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1109,7 +1349,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44530",
+    "missing": false,
+    "hmdbId": 44530,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44530",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1118,6 +1363,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Mitchell Building",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1137,7 +1383,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44531",
+    "missing": false,
+    "hmdbId": 44531,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44531",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1146,6 +1397,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: St. George Hotel",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1165,7 +1417,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44532",
+    "missing": false,
+    "hmdbId": 44532,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44532",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1174,6 +1431,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Kaufmann Building",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1193,7 +1451,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44533",
+    "missing": false,
+    "hmdbId": 44533,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44533",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1202,6 +1465,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: How Building",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1221,7 +1485,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44538",
+    "missing": false,
+    "hmdbId": 44538,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44538",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1230,6 +1499,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Bechler Building",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1249,7 +1519,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44539",
+    "missing": false,
+    "hmdbId": 44539,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44539",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1258,6 +1533,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Corner Building",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1277,7 +1553,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44542",
+    "missing": false,
+    "hmdbId": 44542,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44542",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1286,6 +1567,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: United Methodist Church",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1305,7 +1587,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44543",
+    "missing": false,
+    "hmdbId": 44543,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44543",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1314,6 +1601,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Cody House",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1333,7 +1621,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44544",
+    "missing": false,
+    "hmdbId": 44544,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44544",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1342,6 +1635,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Parr Building",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1361,7 +1655,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44545",
+    "missing": false,
+    "hmdbId": 44545,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44545",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1370,6 +1669,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Presbyterian Church",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1389,7 +1689,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-44546",
+    "missing": false,
+    "hmdbId": 44546,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44546",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1398,6 +1703,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Weston Christian Church",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1417,7 +1723,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "National Park Service, U.S. Department of the Interior",
     "markerNumber": "HMdb-44565",
+    "missing": false,
+    "hmdbId": 44565,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44565",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1426,6 +1737,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: The Lewis and Clark Expedition",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1445,7 +1757,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "the St. Joseph Museum, Platte County Vistors Bureau, and The Native Sons of Greater Kansas City",
     "markerNumber": "HMdb-44567",
+    "missing": false,
+    "hmdbId": 44567,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=44567",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1454,6 +1771,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Cow Island",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1473,7 +1791,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2004,
+    "erectedBy": "Native Sons and Daughters of Greater Kansas City",
     "markerNumber": "HMdb-63521",
+    "missing": false,
+    "hmdbId": 63521,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=63521",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-city-kci"
@@ -1482,6 +1805,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Platte City",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1501,7 +1825,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Platte County Historical Society",
     "markerNumber": "HMdb-63522",
+    "missing": false,
+    "hmdbId": 63522,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=63522",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-city-kci"
@@ -1510,6 +1839,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Guy B. Park",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1529,7 +1859,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2006,
+    "erectedBy": "Veterans of Foreign Wars Post 4055 and Platte County",
     "markerNumber": "HMdb-63523",
+    "missing": false,
+    "hmdbId": 63523,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=63523",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-city-kci"
@@ -1538,6 +1873,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Veterans Memorial",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1557,7 +1893,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Platte County Historical Society",
     "markerNumber": "HMdb-64391",
+    "missing": false,
+    "hmdbId": 64391,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=64391",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-city-kci"
@@ -1566,6 +1907,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Former Site of Red Crown Tavern and Tourist Cabins",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1585,7 +1927,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Platte County Historical Society",
     "markerNumber": "HMdb-65993",
+    "missing": true,
+    "hmdbId": 65993,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=65993",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-south-parkville"
@@ -1594,6 +1941,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Parkville",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1613,7 +1961,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Historic Parkville",
     "markerNumber": "HMdb-65995",
+    "missing": false,
+    "hmdbId": 65995,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=65995",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-south-parkville"
@@ -1622,6 +1975,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Park Bank - Farmers Exchange Bank",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1641,7 +1995,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2009,
+    "erectedBy": "Missouri's Civil War Heritage Foundation, Inc., and Sons of Confederate Veterans",
     "markerNumber": "HMdb-65997",
+    "missing": true,
+    "hmdbId": 65997,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=65997",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-south-parkville"
@@ -1650,6 +2009,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Attack on the Paw Paw Fort",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1669,7 +2029,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 1955,
+    "erectedBy": "State Historical Society of Missouri and State Highway Commission",
     "markerNumber": "HMdb-66465",
+    "missing": false,
+    "hmdbId": 66465,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=66465",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-city-kci"
@@ -1678,6 +2043,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Platte County",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1697,7 +2063,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 1987,
+    "erectedBy": null,
     "markerNumber": "HMdb-73531",
+    "missing": false,
+    "hmdbId": 73531,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=73531",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-south-parkville"
@@ -1706,6 +2077,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Renner Village Site",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1725,7 +2097,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2012,
+    "erectedBy": "Town of Weston and the Weston Historical Museum. Panels were designed by Mary Jo Heidrick.",
     "markerNumber": "HMdb-77143",
+    "missing": false,
+    "hmdbId": 77143,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=77143",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1734,6 +2111,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Timeline of Weston History",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1753,7 +2131,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-77145",
+    "missing": false,
+    "hmdbId": 77145,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=77145",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1762,6 +2145,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Benjamin Wood House",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1781,7 +2165,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2014,
+    "erectedBy": "Platte County Outreach Grant Program and the Weston Community Theatre",
     "markerNumber": "HMdb-77293",
+    "missing": false,
+    "hmdbId": 77293,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=77293",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1790,6 +2179,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Laurel Hill Cemetery",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1809,7 +2199,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2014,
+    "erectedBy": "Platte County Outreach Grant Program and the Weston Community Theatre",
     "markerNumber": "HMdb-77294",
+    "missing": false,
+    "hmdbId": 77294,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=77294",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1818,6 +2213,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Laurel Hill Cemetery",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1837,7 +2233,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2014,
+    "erectedBy": "Platte County Outreach Grant Program and the Weston Community Theatre",
     "markerNumber": "HMdb-77295",
+    "missing": false,
+    "hmdbId": 77295,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=77295",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1846,6 +2247,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Laurel Hill Cemetery",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1865,7 +2267,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2014,
+    "erectedBy": "Platte County Outreach Grant Program and the Weston Community Theatre",
     "markerNumber": "HMdb-77296",
+    "missing": false,
+    "hmdbId": 77296,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=77296",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1874,6 +2281,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Laurel Hill Cemetery",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1893,7 +2301,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2014,
+    "erectedBy": "Platte County Outreach Grant Program and the Weston Community Theatre",
     "markerNumber": "HMdb-77297",
+    "missing": false,
+    "hmdbId": 77297,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=77297",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -1902,6 +2315,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Laurel Hill Cemetery",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1921,7 +2335,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B1",
+    "missing": false,
+    "hmdbId": 149313,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=149313",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -1929,6 +2348,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Tribal Heritage",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1948,7 +2368,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "B12",
+    "missing": false,
+    "hmdbId": 196085,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=196085",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -1956,6 +2381,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: KC: On Flight",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -1975,7 +2401,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "Kansas City International Airport",
     "markerNumber": "C1",
+    "missing": false,
+    "hmdbId": 196103,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=196103",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -1983,6 +2414,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: KC's Baseball Story",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -2002,7 +2434,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2018,
+    "erectedBy": "The Native Sons and Daughters of Greater Kansas City \u2022 Kansas City Parks and Recreation",
     "markerNumber": "47",
+    "missing": true,
+    "hmdbId": 252141,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=252141",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county"
     ],
@@ -2010,6 +2447,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: The Town of Barry",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -2029,7 +2467,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2015,
+    "erectedBy": "Board of Alderman, Platte City",
     "markerNumber": "HMdb-254872",
+    "missing": false,
+    "hmdbId": 254872,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=254872",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-city-kci"
@@ -2038,6 +2481,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: USS Platte Anchor",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -2057,7 +2501,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": 2021,
+    "erectedBy": "Black Ancestors Awareness Campaign of Weston, Weston Historical Museum, and Platte County Parks & Rec",
     "markerNumber": "HMdb-302066",
+    "missing": false,
+    "hmdbId": 302066,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=302066",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -2066,6 +2515,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: The Dinah Robinson Courtyard",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -2085,7 +2535,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": null,
     "markerNumber": "HMdb-302067",
+    "missing": false,
+    "hmdbId": 302067,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=302067",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -2094,6 +2549,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Weston Burley House #1",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],
@@ -2113,7 +2569,12 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
     "county": "Platte County",
     "state": "MO",
     "yearErected": null,
+    "erectedBy": "City of Weston",
     "markerNumber": "HMdb-302070",
+    "missing": false,
+    "hmdbId": 302070,
+    "hmdbUrl": "https://www.hmdb.org/m.asp?m=302070",
+    "submissionCredits": "Documented on The Historical Marker Database (HMdb.org) by volunteer correspondents.",
     "routeIds": [
       "route-platte-all-county",
       "route-platte-weston-river"
@@ -2122,6 +2583,7 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       {
         "url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
         "caption": "Historical Marker: Weston, Missouri",
+        "credit": "HMdb.org contributing photographers & correspondents",
         "isPlaquePhoto": false
       }
     ],

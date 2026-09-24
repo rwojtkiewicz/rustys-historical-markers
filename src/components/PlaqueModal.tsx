@@ -277,22 +277,24 @@ export const PlaqueModal: React.FC<PlaqueModalProps> = ({
               </div>
 
               {/* HMdb Database Source / Submission Credits */}
-              <div className="flex items-center justify-between text-[10px] text-slate-500 px-1">
-                {marker.hmdbUrl && (
-                  <a
-                    href={marker.hmdbUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-amber-400/80 hover:text-amber-300 underline font-mono"
-                  >
-                    HMdb.org Source #{marker.hmdbId || marker.id} ↗
-                  </a>
-                )}
-                {marker.submissionCredits && (
-                  <span className="truncate max-w-[240px]" title={marker.submissionCredits}>
-                    {marker.submissionCredits}
-                  </span>
-                )}
+              <div className="mt-2 pt-2 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between text-[10px] text-slate-400 gap-1 bg-slate-950/60 p-2.5 rounded-xl border border-slate-800">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-amber-400 font-bold">Source:</span>
+                  <span>The Historical Marker Database</span>
+                  {marker.hmdbUrl && (
+                    <a
+                      href={marker.hmdbUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-amber-300 hover:text-amber-200 underline font-mono ml-1"
+                    >
+                      (HMdb #{marker.hmdbId || marker.id.replace('marker-platte-', '')} ↗)
+                    </a>
+                  )}
+                </div>
+                <span className="text-slate-400 text-[9px]">
+                  Documented by volunteer correspondents & photographers
+                </span>
               </div>
             </div>
           )}

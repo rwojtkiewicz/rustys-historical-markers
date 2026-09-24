@@ -202,6 +202,46 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
           ))}
         </div>
       </div>
+
+      {/* CREDITS & DATA ATTRIBUTION */}
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-3.5 space-y-3 shadow-lg">
+        <div className="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+          <HelpCircle className="w-4 h-4 text-amber-400" />
+          <span>Credits & Historical Data Attribution</span>
+        </div>
+
+        <div className="space-y-2 text-xs text-slate-300 leading-relaxed font-sans">
+          <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 space-y-1">
+            <div className="font-bold text-amber-200 flex items-center justify-between">
+              <span>The Historical Marker Database (HMdb.org)</span>
+              <a
+                href="https://www.hmdb.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] text-amber-400 hover:underline font-mono"
+              >
+                Visit HMdb.org ↗
+              </a>
+            </div>
+            <p className="text-[11px] text-slate-400">
+              Marker records, GPS coordinates, plaque inscriptions, and photographic documentation are sourced with gratitude from <strong>The Historical Marker Database (HMdb.org)</strong> and its dedicated community of volunteer correspondents, photographers, and editors who preserve roadside history.
+            </p>
+          </div>
+
+          <div className="p-3 bg-slate-950 rounded-xl border border-slate-800/80 space-y-1">
+            <div className="font-bold text-amber-200">
+              Historical Societies & Sponsoring Organizations
+            </div>
+            <p className="text-[11px] text-slate-400">
+              Honoring the research and marker sponsorships by the <strong>Platte County Historical Society</strong>, <strong>Native Sons and Daughters of Greater Kansas City</strong>, <strong>Black Ancestors Awareness Campaign of Weston</strong>, <strong>State Historical Society of Missouri</strong>, <strong>National Park Service</strong>, and local veterans organizations.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-[10px] text-slate-500 font-mono text-center pt-1 border-t border-slate-800">
+          Rusty's Roadside Historical Markers • Platte County Edition v1.2.0
+        </div>
+      </div>
     </div>
   );
 };
