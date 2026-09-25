@@ -2588,6 +2588,41 @@ export const HISTORICAL_MARKERS: HistoricalMarker[] = [
       }
     ],
     "historicalContext": "Official Platte County historical marker documented in HMdb (#302070) in Weston, Missouri."
+  },
+  {
+    "id": "marker-platte-custom-muehlbach-legacy",
+    "title": "The Muehlbach Legacy",
+    "subtitle": "Parkville Commons, MO Landmark",
+    "plaqueText": "This marker is a tribute to the Muehlbach family of grocers. In 1874, George Muehlbach borrowed $300 from his mother to use as a payment on a grocery store that would become the longest operating father-to-son grocery business ownership in America. Four generations of Muehlbachs served this community until Frank Muehlbach retired, bringing to an end the record ownership run of 130 years. This site marks the final chapter to the oldest continuous father-to-son grocery business in America. The Parkville site of the Muehlbach grocery store was opened in 1968 and closed in 2003. With this marker, the hundreds of thousands of people served by the Muehlbachs express their eternal gratitude to the Muehlbach family of grocers.",
+    "category": "Cultural Heritage",
+    "era": "1874-2003",
+    "lat": 39.209562,
+    "lng": -94.684622,
+    "locationName": "6325 Lewis St (Parkville Commons)",
+    "city": "Parkville",
+    "county": "Platte County",
+    "state": "MO",
+    "yearErected": 2003,
+    "erectedBy": "Friends and Patrons of the Muehlbach Family of Grocers",
+    "markerNumber": "CUSTOM-PARKVILLE-01",
+    "missing": false,
+    "hmdbId": undefined,
+    "hmdbUrl": undefined,
+    "submissionCredits": "Documented and contributed by local history contributors (Rusty's Historical Markers Project).",
+    "routeIds": [
+      "route-platte-all-county",
+      "route-platte-south-parkville"
+    ],
+    "photos": [
+      {
+        "url": "/assets/markers/missouri/greater-kansas-city/platte-county/custom-muehlbach-legacy/muehlbach-marker.jpg",
+        "localPath": "/assets/markers/missouri/greater-kansas-city/platte-county/custom-muehlbach-legacy/muehlbach-marker.jpg",
+        "caption": "The Muehlbach Legacy Marker - Parkville Commons",
+        "credit": "Rusty's Historical Markers Project",
+        "isPlaquePhoto": true
+      }
+    ],
+    "historicalContext": "Commemorating 130 continuous years of father-to-son grocery ownership (1874–2003) by the Muehlbach family in the Kansas City and Parkville region."
   }
 ];
 
@@ -2595,8 +2630,8 @@ export const PRESET_ROUTES: DrivingRoute[] = [
   {
     "id": "route-platte-all-county",
     "name": "All Platte County Historical Markers (Free Roam)",
-    "subtitle": "Comprehensive County-Wide GPS Tour (77 Markers)",
-    "description": "Continuous GPS scan of all 77 historical markers across Platte County, Missouri including Weston, Platte City, KCI Airport, Ferrelview, Parkville, and Camden Point.",
+    "subtitle": "Comprehensive County-Wide GPS Tour (78 Markers)",
+    "description": "Continuous GPS scan of all 78 historical markers across Platte County, Missouri including Weston, Platte City, KCI Airport, Ferrelview, Parkville, and Camden Point.",
     "region": "Platte County, MO (County-Wide)",
     "distanceMiles": 55.0,
     "approxDriveTimeHours": 1.8,
@@ -2736,7 +2771,8 @@ export const PRESET_ROUTES: DrivingRoute[] = [
       "marker-platte-254872",
       "marker-platte-302066",
       "marker-platte-302067",
-      "marker-platte-302070"
+      "marker-platte-302070",
+      "marker-platte-custom-muehlbach-legacy"
     ]
   },
   {
@@ -2917,6 +2953,11 @@ export const PRESET_ROUTES: DrivingRoute[] = [
         "label": "Parkville Historic 1st Street"
       },
       {
+        "lat": 39.209562,
+        "lng": -94.684622,
+        "label": "Parkville Commons (Muehlbach Legacy)"
+      },
+      {
         "lat": 39.18842,
         "lng": -94.68182,
         "label": "Paw Paw Fort River Park"
@@ -2938,7 +2979,8 @@ export const PRESET_ROUTES: DrivingRoute[] = [
       "marker-platte-65993",
       "marker-platte-65995",
       "marker-platte-65997",
-      "marker-platte-73531"
+      "marker-platte-73531",
+      "marker-platte-custom-muehlbach-legacy"
     ]
   }
 ];
