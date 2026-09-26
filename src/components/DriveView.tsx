@@ -184,7 +184,7 @@ export const DriveView: React.FC<DriveViewProps> = ({
             <div className="absolute inset-0 rounded-full border border-amber-500/20 animate-ping"></div>
           </div>
 
-          <h3 className="text-sm font-bold text-amber-100">Scanning Platte County Historical Markers</h3>
+          <h3 className="text-sm font-bold text-amber-100">Scanning {activeRoute ? activeRoute.name : 'Roadside Historical Markers'}</h3>
           <p className="text-[11px] text-slate-400 max-w-xs mt-0.5">
             {isDriving
               ? 'GPS Active. Keep driving—audio narration will automatically trigger when approaching a marker plaque.'
@@ -381,9 +381,9 @@ export const DriveView: React.FC<DriveViewProps> = ({
       <div className="mt-3">
         <div className="flex items-center justify-between text-xs mb-1.5 px-1">
           <span className="font-bold text-slate-300 uppercase text-[10px] tracking-wider">
-            {activeRoute ? activeRoute.name : 'Platte County Markers'} ({corridorMarkers.length})
+            {activeRoute ? activeRoute.name : 'Historical Markers'} ({corridorMarkers.length})
           </span>
-          <span className="text-[10px] text-amber-400">Platte County, MO</span>
+          <span className="text-[10px] text-amber-400 font-medium">{activeRoute?.region || 'Greater KC Northland'}</span>
         </div>
 
         <div className="space-y-1.5 max-h-36 overflow-y-auto pr-1">

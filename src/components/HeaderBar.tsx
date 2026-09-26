@@ -45,7 +45,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
             )}
           </div>
           <p className="text-[10px] text-slate-400 truncate max-w-[210px] mt-0.5 font-medium">
-            {activeRoute ? activeRoute.name : 'Platte County, MO GPS Audio Guide'}
+            {activeRoute ? activeRoute.name : 'GPS Historical Marker Guide'}
           </p>
         </div>
       </div>

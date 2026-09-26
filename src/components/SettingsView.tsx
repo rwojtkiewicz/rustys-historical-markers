@@ -233,13 +233,13 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
               Historical Societies & Sponsoring Organizations
             </div>
             <p className="text-[11px] text-slate-400">
-              Honoring the research and marker sponsorships by the <strong>Platte County Historical Society</strong>, <strong>Native Sons and Daughters of Greater Kansas City</strong>, <strong>Black Ancestors Awareness Campaign of Weston</strong>, <strong>State Historical Society of Missouri</strong>, <strong>National Park Service</strong>, and local veterans organizations.
+              Honoring the research and marker sponsorships by the <strong>Clay County Historical Society</strong>, <strong>Platte County Historical Society</strong>, <strong>Native Sons and Daughters of Greater Kansas City</strong>, <strong>Black Ancestors Awareness Campaign of Weston</strong>, <strong>State Historical Society of Missouri</strong>, <strong>National Park Service</strong>, and local veterans organizations.
             </p>
           </div>
         </div>
 
         <div className="text-[10px] text-slate-500 font-mono text-center pt-1 border-t border-slate-800">
-          Rusty's Roadside Historical Markers • Platte County Edition v1.2.0
+          Rusty's Roadside Historical Markers • Greater KC Northland (Platte & Clay Counties) v1.3.0
         </div>
       </div>
     </div>
